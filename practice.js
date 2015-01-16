@@ -5,7 +5,16 @@ var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only argument.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
-  //Code Here
+var isTyler = function(theName) {
+  if (name === "Tyler") {
+   return true; 
+  }
+   else {
+    return false;
+   }
+
+}
+isTyler(theName);
 
 
 //Next problem
@@ -14,8 +23,12 @@ var name = 'Tyler';
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-
-  //Code Here
+var getName = function() {
+  var userName = prompt("What is your name?");
+  return userName;
+}
+//getName();
+ 
 
 
 //Next Problem
@@ -25,7 +38,12 @@ var name = 'Tyler';
 //Create a function called welcome that uses your getName function you created in the previous problem to get the users name,
 //then alerts "Welcome, " plus whatever the users name is.
 
-  //Code Here
+  var welcome = function() {
+   var newName = getName();
+   alert("Welcome " + newName);
+}
+  welcome();
+  
 
 
 //Next problem
@@ -46,8 +64,13 @@ var name = 'Tyler';
 
 //What is the difference between arguments and parameters?
 
-  //Answer Here
+  var numbers = function(numOne, numTwo) {
+    return numOne + numTwo;
+  }
+numbers(4,7);
 
+paremters are variables inside the parentheses of the function statement
+arguments are the data that is passed to the paremeters
 
 //Next problem
 
@@ -56,9 +79,10 @@ var name = 'Tyler';
 //What are all the falsy values in JavaScript and how do you check if something is falsy?
 
 
-  //Answer Here
+  //Answer Here 
+  undefined, null, NaN, ""(empty string), 0,  and false.
 
-
+it can be determined by putting it in the parentheses
 
 //Next Problem
 
@@ -66,15 +90,21 @@ var name = 'Tyler';
 
 //Create a function called myName that returns your name
 
-  //Code Here
+  var myName = function() {
+    return "Tim";
+  }
+  myName();
 
 //Now save the function definition of myName into a new variable called newMyName
 
-  //Code Here
+   var myName = function() {
+    return "Tim";
+  }
+  var newMyName = myName();
 
 //Now alert the result of invoking newMyName
 
-
+alert(newMyName);
 
 //Next problem
 
@@ -82,10 +112,16 @@ var name = 'Tyler';
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
-
+ var outerFn = function() {
+    return function() {
+      return "Tim Garlick";
+    } (); // this button is used to call the anonymous function
+}
+//outerFN(); this is calling the function but I am commenting it out so I can call it below with a function.
 //Now save the result of invoking outerFn into a variable called innerFn.
+ var innerFn = outerFn();
 
-  //Code Here
 
 //Now invoke innerFn.
+
+innerFn;
